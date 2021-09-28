@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateGameRequest;
 use Exception;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
 {
 
-    public function create(Request $request)
+    public function create(CreateGameRequest $request)
     {
         $playersCount = $request->player_count;
-
-        if (empty($playersCount) || $playersCount < 0) {
-            throw new Exception("Input value does not exist or value is invalid");
-        }
 
         # Initialise cards
         $suits = ["S", "H", "D", "C"];
@@ -49,6 +46,8 @@ class GameController extends Controller
 
         $result = implode("\r", $result);
 
-        return $result;
+        return response()->json([
+            "cards" => $result
+        ]);
     }
 }

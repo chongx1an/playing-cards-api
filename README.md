@@ -13,3 +13,6 @@ Valid input:
 
 Invalid input: 
 <img width="1005" alt="Screenshot 2021-09-29 at 11 02 08 AM" src="https://user-images.githubusercontent.com/40559684/135195913-7135ac8e-7a4a-4f66-aa51-3e5ac7aae308.png">
+
+# Time used
+Around 30 mins
